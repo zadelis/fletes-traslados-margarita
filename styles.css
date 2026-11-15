@@ -338,6 +338,74 @@ nav a:focus-visible {
   color: var(--color-text);
 }
 
+.vehiculos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 5px; 
+  padding: 5px;
+  background-color: var(--color-secondary);
+  margin-top: 5px;
+  color: var(--color-text-light);
+}
+
+.vehiculos img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 180px;
+  object-fit: contain;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.vehiculos > h3 {
+  grid-column: 1 / -1;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
+}
+
+.vehiculos p {
+  color: var(--color-text-light);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.camion,
+.automovil {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "foto titulo"
+  "foto description";
+  align-items: center; 
+}
+
+.vehiculo-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.camion img,
+.automovil img {
+  grid-area: foto;
+}
+
+.camion h4,
+.automovil h4 {
+  grid-area: titulo;
+  margin: 0;
+}
+
+.camion p,
+.automovil p {
+  grid-area: description;
+  margin: 0;
+}
+
 /* cobertura */
 
 #cobertura {
@@ -419,7 +487,6 @@ html {
   font-weight: bolder;
   padding: 5px;
   gap: 0;
-  border-radius: 5px;
   margin: 0;
 }
 
@@ -680,6 +747,10 @@ html {
     #contacto p,
     #contacto ul {
       font-size: 1.5rem;
+    }
+
+    .vehiculos {
+      grid-template-columns: 1fr;
     }
   }
 

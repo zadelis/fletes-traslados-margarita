@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fletesytrasladosmargarita.netlify.app/sitemap.xml
